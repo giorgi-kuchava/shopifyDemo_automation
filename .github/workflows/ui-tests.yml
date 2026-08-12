@@ -1,0 +1,52 @@
+name: UI Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      browser:
+        description: Browser to run UI tests with
+        required: true
+        default: safari
+        type: choice
+        options:
+          - safari
+          - chrome
+
+jobs:
+  ui-tests:
+    name: UI tests on macOS
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Enable Safari WebDriver
+        if: ${{ inputs.browser == 'safari' }}
+        run: sudo safaridriver --enable
+
+      - name: Run UI tests
+        run: mvn -B clean test -DsuiteXmlFile=src/test/resources/testng-ui.xml -Dbrowser=${{ inputs.browser }}
+
+      - name: Upload TestNG reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testng-ui-reports-${{ inputs.browser }}
+          path: target/surefire-reports/
+          if-no-files-found: ignore
+
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-ui-results-${{ inputs.browser }}
+          path: target/allure-results/
+          if-no-files-found: ignore

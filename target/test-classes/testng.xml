@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Sauce Demo Suite" verbose="1" parallel="none">
+    <test name="UI Tests">
+        <groups>
+            <run>
+                <include name="ui"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="ui.HomePageTest"/>
+            <class name="ui.NavigationTest"/>
+            <class name="ui.AccountPagesTest"/>
+            <class name="ui.CatalogTest"/>
+            <class name="ui.CartTest"/>
+            <class name="ui.ContentPagesTest"/>
+            <class name="ui.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="API Tests">
+        <groups>
+            <run>
+                <include name="api"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="api.ProductsApiTest"/>
+        </classes>
+    </test>
+</suite>

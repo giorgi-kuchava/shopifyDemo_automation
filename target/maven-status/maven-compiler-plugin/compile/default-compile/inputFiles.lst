@@ -1,0 +1,14 @@
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/api/ProductsApiClient.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/pages/AboutPage.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/pages/BasePage.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/pages/BlogPage.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/pages/CartPage.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/pages/HomePage.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/pages/LoginPage.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/pages/ProductPage.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/pages/ProductsPage.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/pages/RegisterPage.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/pages/SearchPage.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/utils/ConfigReader.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/utils/DriverFactory.java
+/Users/giorgikuchava/Documents/shopifyDemo_automation/src/main/java/utils/WaitUtils.java

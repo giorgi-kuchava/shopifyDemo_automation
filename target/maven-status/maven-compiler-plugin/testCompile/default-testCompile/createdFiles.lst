@@ -1,9 +1,0 @@
-ui/CatalogTest.class
-ui/ContentPagesTest.class
-ui/HomePageTest.class
-ui/SearchTest.class
-ui/BaseUiTest.class
-api/ProductsApiTest.class
-ui/AccountPagesTest.class
-ui/CartTest.class
-ui/NavigationTest.class
